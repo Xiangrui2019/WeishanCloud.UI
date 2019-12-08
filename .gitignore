@@ -1,0 +1,11 @@
+.vs
+lib
+*.min.css
+*.min.js
+node_modules
+npm-debug.log
+yarn.lock
+*.log
+/fonts/
+.vscode
+.idea
