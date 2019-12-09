@@ -1,12 +1,14 @@
-default: deps build package
+default: deps build package push
 
 deps:
 	npm install
 	npm install -dev
-	npm install gulp-cli
 
 build:
 	npx gulp
 
 package:
-	docker build . -t weishan-cloud-ui
+	docker build . -t weishancloud/weishancloud-ui
+
+push:
+	docker push weishancloud/weishancloud-ui
