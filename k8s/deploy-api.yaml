@@ -1,0 +1,42 @@
+---
+# 部署Weishan云的UI类库
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: weishancloud-ui
+  namespace: weishan-apps
+  labels:
+    name: weishancloud-ui
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      name: weishancloud-ui
+  template:
+    metadata:
+      labels:
+        name: weishancloud-ui
+    spec:
+      containers:
+        - name: weishan-cloud-ui-pod
+          image:  weishancloud/weishancloud-ui
+          ports:
+            - containerPort: 80
+          imagePullPolicy: Always
+
+---
+
+# 部署Weishan
+kind: Service
+apiVersion: v1
+metadata:
+  name: weishan-cloud-ui-service
+  namespace: weishan-apps
+spec:
+  type: NodePort
+  ports:
+    - port: 80
+      targetPort: 80
+  selector:
+    name: weishancloud-ui
+---
