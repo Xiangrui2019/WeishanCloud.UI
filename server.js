@@ -16,5 +16,5 @@ app.register(fastify_static, {
 });
 
 app.listen(80, "0.0.0.0", () => {
-    console.log("[WeishanUI] Server started on 0.0.0.0:80");
+    console.log("[WeishanCloud.UI] Server started on 0.0.0.0:80");
 });
