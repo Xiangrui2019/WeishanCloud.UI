@@ -107,4 +107,4 @@ gulp.task('js', function (done) {
     done();
 });
 
-gulp.task('bundle', gulp.series('clean', 'copy-fonts', 'css', 'js'));
+gulp.task('default', gulp.series('clean', 'copy-fonts', 'css', 'js'));
