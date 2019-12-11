@@ -1,0 +1,18 @@
+---
+
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: weishan-cloud-ui-ingress
+  namespace: weishan-apps
+spec:
+  rules:
+    - host: ui.chenbaibai.xyz
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: weishan-cloud-ui-service
+              servicePort: 80
+
+---
