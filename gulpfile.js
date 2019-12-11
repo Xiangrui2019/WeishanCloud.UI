@@ -44,14 +44,6 @@ var packages = [
     },
     {
         inputFiles: [
-            'node_modules/primer/build/build.css',
-            'css/Product.css'
-        ],
-        iscss: true,
-        outputFileName: 'Product.min.css'
-    },
-    {
-        inputFiles: [
             'node_modules/datatables/media/css/jquery.dataTables.css',
             'node_modules/primer-markdown/build/build.css',
             'node_modules/github-syntax-light/lib/github-light.css',
